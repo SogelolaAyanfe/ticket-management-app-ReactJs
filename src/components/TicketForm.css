@@ -1,0 +1,134 @@
+.ticket-form {
+  max-width: 1440px;
+  background: white;
+  padding: 2rem;
+}
+
+.go-back {
+  color: white;
+  display: flex;
+  justify-content: none !important;
+  background: #351764;
+  border: none;
+  width: 100px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.go-back:hover {
+  color: #ecebff;
+  background: #1f1f1f;
+}
+
+.form-header {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.group-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  max-width: 1440px;
+}
+
+.group-form input {
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 50px;
+  width: 600px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-left: 15px;
+}
+.group-form input::placeholder {
+  color: black;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.group-form.full textarea {
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 200px;
+  width: 600px;
+  resize: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+textarea::placeholder {
+  color: black;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.group-form.full {
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+.button-submit {
+  align-self: flex-start;
+  color: white;
+  padding: 8px 16px;
+}
+
+.button-submit:hover {
+  background: #333;
+}
+
+@media screen and (max-width: 770px) {
+  .group-form {
+    flex-direction: column;
+  }
+  .form-flex {
+    padding-bottom: 0;
+  }
+
+  .group-form {
+    max-width: 500px;
+  }
+
+  .group-form input,
+  .group-form.full textarea {
+    width: 80%;
+  }
+  .go-back {
+    padding: none;
+  }
+}
