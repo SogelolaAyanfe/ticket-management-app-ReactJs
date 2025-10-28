@@ -3,7 +3,7 @@ import Landing from "./routes/Home";
 import Login from "./routes/Login";
 import Dashboard from "./routes/Dashboard";
 import TicketManager from "./routes/TicketManager";
-import Signup from "./routes/SignUp";
+import Signup from "./routes/Signup";
 function App() {
   
 
