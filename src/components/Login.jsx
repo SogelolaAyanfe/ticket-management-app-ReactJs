@@ -2,14 +2,16 @@ import { useLogin } from "../modules/auth";
 import "./Login.css"
 import { useIsAuthourized } from './../modules/auth';
 import { useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
     const { mutate, isError } = useLogin()
     const isAuthourized = useIsAuthourized()
+    const navigate = useNavigate()
     
     useEffect(() => {
         if (isAuthourized) {
-                window.location.href = "/Dashboard";
+           navigate("/Dashboard");
             
         }
     },[isAuthourized])
@@ -78,7 +80,7 @@ const LogIn = () => {
                 </div>
                 <button type="submit">Login</button>
           </form>
-          <p >Don't have an account? <a href="/auth/signup" class="form-footer">Sign up</a></p>
+          <p >Don't have an account? <Link to="/auth/signup" class="form-footer">Sign up</Link></p>
           <div id="message" className="message">Log in successful!</div>
           {isError && <p className="error-message">{ isError}</p>}
         </div>

@@ -73,7 +73,7 @@ const SignUp = () => {
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
-            <p>Already have an account? <a href="/auth/login" className="form-footer">Log in</a></p>
+           <p>Already have an account? <Link to="/auth/login" className="form-footer">Log in</Link></p>
             <div id="message" className="message">Sign Up successful!</div>
             {isError && <p className="error-message">{ isError}</p>}
         </div>
