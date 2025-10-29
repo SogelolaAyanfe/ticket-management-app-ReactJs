@@ -5,14 +5,13 @@ import { useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
-    const { mutate, isError } = useLogin()
+   const { mutate, isError } = useLogin()
     const isAuthourized = useIsAuthourized()
     const navigate = useNavigate()
     
     useEffect(() => {
         if (isAuthourized) {
-           navigate("/Dashboard");
-            
+           navigate("/dashboard"); // lowercase for consistency
         }
     },[isAuthourized, navigate])
     
@@ -30,32 +29,15 @@ const LogIn = () => {
         })
 
         if (mutation?.data) {
-            
             successMessage.style.color = "green";
             successMessage.style.display = "block";
             successMessage.innerText = "Log in successful! Redirecting...";
 
             setTimeout(() => {
                 form.reset();
-                window.location.href = "/Dashboard";
+                navigate("/dashboard"); 
             }, 2000);
         }
-
-        // if(localStorage.getItem(username) === password) {
-        //     successMessage.style.color = "green";
-        //     successMessage.style.display = "block";
-        //     successMessage.innerText = "Log in successful! Redirecting...";
-
-          
-        // } 
-        // else {
-        //     successMessage.style.color = "red";
-        //     successMessage.style.display = "block";
-        //     successMessage.innerText = "Invalid username or password. Please try again.";
-            
-        // }
-
-       
     }
 
 
@@ -80,7 +62,7 @@ const LogIn = () => {
                 </div>
                 <button type="submit">Login</button>
           </form>
-          <p >Don't have an account? <Link to="/auth/signup" class="form-footer">Sign up</Link></p>
+          <p>Don't have an account? <Link to="/auth/signup" class="form-footer">Sign up</Link></p>
           <div id="message" className="message">Log in successful!</div>
           {isError && <p className="error-message">{ isError}</p>}
         </div>
