@@ -2,7 +2,7 @@
 
 A modern ticket management web application built with React, JavaScript, TypeScript, and Vite. Features secure authentication, full CRUD operations, and real-time dashboard statistics.
 
-**Live Deployment : https://ticket-management-web-application.netlify.app/
+**Live Deployment** : https://ticket-management-web-application.netlify.app/
 
 ## Features
 
