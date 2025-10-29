@@ -1,19 +1,68 @@
-# React + Vite
+# React Ticket Management System
 
-#Live deployment : https://ticket-management-web-application.netlify.app/
+A modern ticket management web application built with React, JavaScript, TypeScript, and Vite. Features secure authentication, full CRUD operations, and real-time dashboard statistics.
+
+**Live Deployment : https://ticket-management-web-application.netlify.app/
+
+## Features
+
+- **Authentication:** Secure signup/login with bcrypt password hashing
+- **Ticket CRUD:** Create, read, update, and delete tickets with status tracking
+- **Dashboard:** Real-time statistics for total, open, in-progress, and resolved tickets
+- **Responsive UI:** Modern card-based design with smooth animations
+
+## Tech Stack
+
+React  • TypeScript • Vite • React Router • localStorage • bcryptjs
+
+## Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/react-ticket-manager.git
+cd react-ticket-manager
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Open browser to http://localhost:5173
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+├── modules/             # Business logic (auth, ticket-manager)
+├── pages/              # Page components
+└── styles/             # CSS files
+```
+
+## Usage
+
+1. **Sign Up** - Create account (password min. 10 characters)
+1. **Login** - Access your dashboard
+1. **Dashboard** - View ticket statistics
+1. **Manage Tickets** - Create, edit, or delete tickets
+
+## Deployment
+
+Deployed on Netlify. To deploy your own:
+
+1. Push code to GitHub
+1. Connect repo to Netlify
+1. Build command: `npm run build`
+1. Publish directory: `dist`
 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
