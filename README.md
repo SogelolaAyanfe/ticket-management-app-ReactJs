@@ -19,7 +19,7 @@ React  • TypeScript • Vite • React Router • localStorage • bcryptjs
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/react-ticket-manager.git
+git clone https://github.com/SogelolaAyanfe/ticket-management-app-ReactJs.git
 cd react-ticket-manager
 
 # Install dependencies
