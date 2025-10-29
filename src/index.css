@@ -1,8 +1,12 @@
-html { 
+html {
   margin: 0;
   padding: 0;
   width: 100%;
-  
+}
+
+a {
+  color: purple;
+  text-decoration: none;
 }
 
 #root {
@@ -20,7 +24,6 @@ body {
   font-style: normal;
 }
 
-
 @media screen and (min-width: 1441px) {
   body {
     display: flex;
@@ -28,7 +31,7 @@ body {
     justify-content: center;
     flex-direction: column;
   }
-  
+
   #root {
     max-width: 1440px;
     margin: 0 auto;

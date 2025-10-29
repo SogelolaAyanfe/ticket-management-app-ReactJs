@@ -23,6 +23,10 @@
   box-shadow: 0 4px 15px rgba(238, 90, 111, 0.3);
   animation: slideIn 0.3s ease-out;
 }
+.form footer{
+  color: green;
+  text-decoration: none !important;
+}
 
 @keyframes slideIn {
   from {
@@ -123,7 +127,8 @@ button:hover {
     width: 500px;
   }
 
-  .error-message, .message {
+  .error-message,
+  .message {
     width: 480px;
   }
 }
@@ -133,7 +138,8 @@ button:hover {
     width: 350px;
   }
 
-  .error-message, .message {
+  .error-message,
+  .message {
     width: 320px;
   }
 }
@@ -143,7 +149,8 @@ button:hover {
     width: 250px;
   }
 
-  .error-message, .message {
+  .error-message,
+  .message {
     width: 220px;
   }
 }

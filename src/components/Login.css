@@ -54,6 +54,10 @@
 .header h2 {
   padding: 10px;
 }
+.form footer{
+  color: green;
+  text-decoration: none !important;
+}
 
 form {
   padding-bottom: 30px;

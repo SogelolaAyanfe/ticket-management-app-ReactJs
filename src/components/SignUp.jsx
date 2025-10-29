@@ -1,47 +1,44 @@
 import "./SignUpStyles.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import React,{useEffect} from 'react'
 import { useSignUp,useIsAuthourized } from "../modules/auth"; 
 
 const SignUp = () => {
     const { mutate, isError } = useSignUp()
-        const isAuthourized = useIsAuthourized()
+    const isAuthourized = useIsAuthourized()
+    const navigate = useNavigate()
     
-        useEffect(() => {
-            if (isAuthourized) {
-                    window.location.href = "/Dashboard";
-                
-            }
-        },[isAuthourized])
+    useEffect(() => {
+        if (isAuthourized) {
+            navigate("/dashboard");
+        }
+    },[isAuthourized, navigate])
         
     function handleSignUp(event) {
-
         event.preventDefault();
         const form = document.getElementById("form-signup");
-        // const username = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const successMessage = document.getElementById("message");
         successMessage.style.display = "none";
         
-      const mutation =  mutate({
+        const mutation = mutate({
             email,
             password
-      });
-        //accepts input of email and password, runs the signUP and returns the output data or undefined.
+        });
         
         if (mutation.data) {
-        successMessage.style.color = "green";
+            successMessage.style.color = "green";
             successMessage.style.display = "block";
             successMessage.innerText = "Sign up successful! Redirecting...";
 
             setTimeout(() => {
                 form.reset();
-                window.location.href = "/SignIn";
+                navigate("/auth/login");
             }, 2000);
-            
         }
+    }
         
 
         // if (localStorage.getItem(username)) {
@@ -55,7 +52,6 @@ const SignUp = () => {
 
         // }
 
-    }
 
     return (
         <div className="signup-form">
@@ -77,6 +73,7 @@ const SignUp = () => {
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
+            <p>Already have an account? <a href="/auth/login" className="form-footer">Log in</a></p>
             <div id="message" className="message">Sign Up successful!</div>
             {isError && <p className="error-message">{ isError}</p>}
         </div>
