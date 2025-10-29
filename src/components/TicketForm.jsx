@@ -1,6 +1,7 @@
 import "./TicketForm.css"
 import { useCreateTicket } from "../modules/ticket-manager"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const TicketForm = () => {
   const { mutate, isError } = useCreateTicket()
@@ -30,7 +31,7 @@ const TicketForm = () => {
   return (
     <div className="ticket-form">
       <section className="form-header">
-         <button className="go-back"><a href="/Dashboard">←</a></button>
+         <button className="go-back"><Link to="/dashboard">←</Link></button>
         <h2>Create Ticket</h2>
         <form className="form-flex" onSubmit={handleSubmit}>
           <div className="group-form">
