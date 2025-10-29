@@ -14,7 +14,7 @@ const LogIn = () => {
            navigate("/Dashboard");
             
         }
-    },[isAuthourized])
+    },[isAuthourized, navigate])
     
     function handleLogIn(event) {
         event.preventDefault();
